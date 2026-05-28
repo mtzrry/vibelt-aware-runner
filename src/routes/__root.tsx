@@ -73,14 +73,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Vibelt" },
+      { name: "description", content: "Vibelt Config is an interactive dashboard for an AI running belt for DHH individuals." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Vibelt" },
+      { property: "og:description", content: "Vibelt Config is an interactive dashboard for an AI running belt for DHH individuals." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vibelt" },
+      { name: "twitter:description", content: "Vibelt Config is an interactive dashboard for an AI running belt for DHH individuals." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e13b65c5-99e9-48f1-86ae-5bbc4c6909d9/id-preview-16298e98--5a783a97-72b5-4a53-8273-7181549dc985.lovable.app-1779969008146.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e13b65c5-99e9-48f1-86ae-5bbc4c6909d9/id-preview-16298e98--5a783a97-72b5-4a53-8273-7181549dc985.lovable.app-1779969008146.png" },
     ],
     links: [
       {
