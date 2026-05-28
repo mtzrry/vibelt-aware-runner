@@ -1,26 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import VibeltConfig from "@/components/VibeltConfig";
+import { AppShell } from "@/components/belt/AppShell";
+import { LiveStats, HazardLogCard, HapticSettings } from "@/components/belt/widgets";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vibelt Config — Smart Running Belt for DHH Runners" },
+      { title: "Dashboard — Vibelt Config" },
       {
         name: "description",
         content:
-          "Configure your Vibelt AI-powered smart running belt: pair via Bluetooth, tune haptic sensitivity, and monitor real-time hazards.",
-      },
-      { property: "og:title", content: "Vibelt Config" },
-      {
-        property: "og:description",
-        content:
-          "Pair, calibrate, and monitor your AI smart running belt designed for Deaf and Hard of Hearing runners.",
+          "Live run stats and real-time hazard log for your Vibelt AI smart running belt.",
       },
     ],
   }),
-  component: Index,
+  component: DashboardPage,
 });
 
-function Index() {
-  return <VibeltConfig />;
+function DashboardPage() {
+  return (
+    <AppShell>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5">
+        <div className="lg:col-span-2 space-y-4 md:space-y-5">
+          <LiveStats />
+          <HazardLogCard />
+        </div>
+        <div className="space-y-4 md:space-y-5">
+          <HapticSettings />
+        </div>
+      </div>
+    </AppShell>
+  );
 }
