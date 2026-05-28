@@ -108,8 +108,8 @@ function ToggleRow({
       <Icon size={16} className="text-cyan-400" />
       <span className="text-sm text-slate-300 flex-1">{label}</span>
       <input type="checkbox" defaultChecked={defaultChecked} className="peer sr-only" />
-      <div className="relative h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-cyan-500 transition">
-        <div className="absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition peer-checked:translate-x-5" />
+      <div className="relative h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-cyan-500 transition peer-checked:[&>span]:translate-x-5">
+        <span className="absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition" />
       </div>
     </label>
   );
