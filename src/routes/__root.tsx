@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { BeltProvider } from "@/context/BeltContext";
 
 import appCss from "../styles.css?url";
 
@@ -113,8 +114,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <BeltProvider>
+        <Outlet />
+      </BeltProvider>
     </QueryClientProvider>
   );
 }
